@@ -1,7 +1,7 @@
 class DiaryEntry
   def initialize(title, contents) # title, contents are strings
     @title = title
-    @contents = contents.split(" ")
+    @contents = contents.split(" ") # array
     @counter = 0
   end
 
@@ -10,7 +10,7 @@ class DiaryEntry
   end
 
   def contents
-    return @contents.join(" ")
+    return @contents.join(" ")  # string
   end
 
   def count_words
@@ -18,10 +18,10 @@ class DiaryEntry
   end
 
   def reading_time(wpm)
-    return @contents.length / wpm
+    puts @contents.length / wpm
   end
 
-  def reading_chunk(wpm, minutes) 
+  def reading_chunk(wpm, minutes) #(words_per_minute, minutes/int)
     string_to_return = @contents[@counter...@counter+(wpm * minutes)].join(" ")
     if @counter + (wpm * minutes) >= @contents.length
       @counter = 0
@@ -30,4 +30,5 @@ class DiaryEntry
     end
     return string_to_return
   end
+
 end

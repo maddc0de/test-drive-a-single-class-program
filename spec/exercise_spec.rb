@@ -6,7 +6,7 @@ RSpec.describe DiaryEntry do
     expect(diary_entry.title).to eq "day 1"
   end
 
-  it "returns title as a string" do
+  it "returns contents as a string" do
     diary_entry = DiaryEntry.new("day 1", "hello diary")
     expect(diary_entry.contents).to eq "hello diary"
   end
@@ -18,7 +18,7 @@ RSpec.describe DiaryEntry do
 
   it "returns reading time in minutes as an integer" do
     text = "hello " * 60
-    diary_entry = DiaryEntry.new("day 1", text.chomp)
+    diary_entry = DiaryEntry.new("day 1", text)
     expect(diary_entry.reading_time(60)).to eq 1
   end
 
