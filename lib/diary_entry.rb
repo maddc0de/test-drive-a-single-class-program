@@ -18,17 +18,19 @@ class DiaryEntry
   end
 
   def reading_time(wpm)
-    puts @contents.length / wpm
+    return @contents.length / wpm
   end
 
-  def reading_chunk(wpm, minutes) #(words_per_minute, minutes/int)
+  def reading_chunk(wpm, minutes)
     string_to_return = @contents[@counter...@counter+(wpm * minutes)].join(" ")
     if @counter + (wpm * minutes) >= @contents.length
       @counter = 0
     else
       @counter += (wpm * minutes)
     end
-    return string_to_return
+    string_to_return
   end
 
 end
+
+

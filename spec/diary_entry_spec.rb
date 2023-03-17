@@ -1,4 +1,4 @@
-require 'exercise'
+require 'diary_entry'
 
 RSpec.describe DiaryEntry do
   it "returns title as a string" do
