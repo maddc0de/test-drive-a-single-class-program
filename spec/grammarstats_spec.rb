@@ -11,6 +11,7 @@ RSpec.describe GrammarStats do
       text = GrammarStats.new
       expect { text.check(1) }.to raise_error "Text must be a string, try again" 
     end
+
   end
 
   context "returns true" do
@@ -18,6 +19,7 @@ RSpec.describe GrammarStats do
       text = GrammarStats.new
       expect(text.check("I am a developer.")).to eq true
     end
+
   end
 
   context "returns false" do
@@ -33,8 +35,15 @@ RSpec.describe GrammarStats do
 
   end
 
+  context "percetage_good" do
+    it "returns 50 when given text to check twice but only 1 passed the check" do
+      text = GrammarStats.new
+      text.check("i am not a developer.")
+      text.check("I am a developer.")
+      expect(text.percentage_good).to eq 50
+    end
 
-
+  end
 
 end
 
