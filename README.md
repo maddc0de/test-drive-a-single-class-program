@@ -4,7 +4,7 @@
 
 ## Objective
 
-To learn how to test-drive a single-class program by focusing on the 'Create Examples as Tests' and 'Implement behaviour' steps firts.
+To learn how to test-drive a single-class program by focusing on the 'Create Examples as Tests' and 'Implement behaviour' steps first.
 
 Test-driving a single-class program is similar to test-driving a single-method program but the approach is different because methods and classes are different: A **Method** is a reusable chunk of code that takes input as arguments and returns a value whilst A **Class** is a blueprint for creating objects.
 
