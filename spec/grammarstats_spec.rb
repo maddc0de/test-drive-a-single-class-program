@@ -43,15 +43,14 @@ RSpec.describe GrammarStats do
       expect(text.percentage_good).to eq 50
     end
 
+    it "returns 66 when given 3 text to check but only 2 passed the check" do
+      text = GrammarStats.new
+      text.check("i am not a developer.")
+      text.check("I am a developer.")
+      text.check("You are a developer.")
+      expect(text.percentage_good).to eq 66
+    end
+
   end
 
 end
-
-
-
-
-
-# obj = text
-# methods = check, percentage_good
-
-# check method returns true if text begins with uppercase && ends with [.!?]
